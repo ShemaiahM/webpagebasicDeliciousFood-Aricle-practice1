@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  background-color: #ff6347;
+  color: aliceblue;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+}
+/* put the flex1 in the main the parent of container but teh main is the child if the body */
+main {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 0 4px 8px grey;
+  border-radius: 20px;
+  overflow: hidden; /*hide the image that is escaping from the container aka card*/
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center;
+  & h2 {
+    margin-bottom: 10px;
+  } /*i have added a short form to actually target the h2 element in the container*/
+
+  & p {
+    color: #555;
+  }
+}
+.footer {
+  background-color: #ff6347;
+  text-align: center;
+  padding: 20px 0px;
+  color: white;
+}
